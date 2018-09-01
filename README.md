@@ -2,7 +2,7 @@
 
 Simple program to play google's chromedino. 
 
-![Alt Text](https://gifs.com/gif/dino-chrome-D9gvQq)
+![Alt Text](https://media.giphy.com/media/wZZW908hLfrQjOFmK3/giphy.gif)
 
 Using 
   OpenCV 
