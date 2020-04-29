@@ -1,3 +1,4 @@
+#import required libraries
 import pyautogui
 import cv2
 import numpy as np
@@ -15,7 +16,8 @@ time_cur = time.time()
 hit_time =0
 font = cv2.FONT_HERSHEY_SIMPLEX
 
-jumptrigger =False
+
+# Crop functionality to get ROI of the Dragon canvas area
 def onMouse(event, x, y, flags, param):
     # print(img[x,y])
     global roi
@@ -27,9 +29,9 @@ def onMouse(event, x, y, flags, param):
         roi[2:4]=[x,y]
         print(roi)
 
-
+# Crop functionality to get ROI of the Dragon canvas area 
+jumptrigger =False
 def onMoused(event, x, y, flags, param):
-    # print(img[x,y])
     global dragonpos
     if event == cv2.EVENT_LBUTTONDOWN:
         print(x,y)
@@ -50,6 +52,7 @@ while 1:
         # roi = [0,0,0,0]
         break;
 
+# Infinite loop to play the game
 while 1:
     cv2.setMouseCallback('dwin',onMoused)
     scrn = pyautogui.screenshot(region= roi)
